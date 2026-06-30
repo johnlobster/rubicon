@@ -39,6 +39,7 @@ function Home() {
         </Typography>
         <Typography align='left'>
           See <a href="/events">Events</a> page: Miniature wargaming, board wargames. 
+          Note that we are not expecting to run tournaments, due to space limitations. Most games are multi player.
           If you would like to run a game, please go to the <a href="/gm">GM</a> page to find details and how to submit your game.
         </Typography>
         <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>Cost</Typography>
