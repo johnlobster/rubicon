@@ -31,6 +31,16 @@ Deployed at https://rubicon-6k5.pages.dev/
 
 ## Implementation notes
 
+### MUI
+
+I find MUI significantly harder to use than advertised. Defaults seem strange and have to wrap everything in `Typography`. Text for mobile is really big, so everything wraps all the time
+
+####
+
+I made font sizes smaller for mobile. Adjusted h1-h6 to use mix of fonts. Done in `theme.ts`
+
+
+
 
 
 
