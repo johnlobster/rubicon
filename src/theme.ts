@@ -17,12 +17,22 @@ const theme = createTheme({
   },
   typography: {
 
-    // breakpoints
+    // MUI? breakpoints
 
     // sm: 600
     // md: 960
     // lg: 1280
     // xl: 1920
+
+    // Cell phone css screen width examples
+    // 250px: iphone SE 2020
+    // 320px: iPhone SE, iPhone 5
+    // 360px: Samsung galaxy S10
+    // 375px: iPhone 6, 7, 8
+    // 390px: iPhone 12
+
+    // 
+
 
     // in the fontSize settings, mobile is first (smaller) 
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',

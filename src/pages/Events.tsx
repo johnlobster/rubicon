@@ -34,7 +34,7 @@ function Events() {
         Use the following buttons to select events by day and category
       </Typography>
 
-      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 2 }}>
+      <Box sx={{ display: 'flex', mb:1.5, gap:0.6, maxWidth: '600px'}}>
         {['weekend', 'saturday', 'sunday'].map((value) => {
           const label = value === 'weekend' ? 'Weekend' : value[0].toUpperCase() + value.slice(1)
           const isSelected = selectedDay === value
@@ -51,7 +51,7 @@ function Events() {
         })}
       </Box>
 
-      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 3 }}>
+      <Box sx={{ display: 'flex', mb: 1.5, gap: 0.6, maxWidth: '600px' }}>
         {[
           { key: 'all', label: 'All games' },
           { key: 'board', label: 'Board games' },

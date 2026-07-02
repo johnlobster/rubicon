@@ -3,12 +3,6 @@
   src: url('./assets/fonts/Australianflyingcorpsstencil-XAJ9.ttf') format('truetype');
 }
 
-/* stop website enlarging text on mobile */
-html,
-body {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
 
 :root {
   --text: #6b6375;
@@ -37,7 +31,27 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media (max-width: 1024px) {
+  /*So, a more mobile friendly set of breakpoints with root font-size might be 
+    - 0px 12px 
+    - 260px 12px 
+    - 330px 14px 
+    - 400px 14px 
+    - 600px 16px
+    see README.md for more details
+    */
+  @media screen and (max-width:259px) {
+    font-size: 8px;
+  }
+  @media screen and (min-width:260px) and (max-width:329px) {
+    font-size: 8px;
+  }
+  @media screen and (min-width:330px) and (max-width:399px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width:400px) and (max-width:599px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width:600px) {
     font-size: 16px;
   }
 }
@@ -78,34 +92,7 @@ body {
   margin: 0;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
 
 code,
 .counter {
