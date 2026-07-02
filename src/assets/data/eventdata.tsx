@@ -1,3 +1,14 @@
+export type EventItem = {
+  day: 'saturday' | 'sunday'
+  title: string
+  startTime: string
+  duration: number
+  tables: number
+  players: string
+  type: 'board' | 'miniatures'
+  description: string
+}
+
 const eventData = [
   {
     day: "Saturday",

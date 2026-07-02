@@ -30,6 +30,10 @@ function Events() {
         Events
       </Typography>
 
+      <Typography  align="left"sx={{ mb: 2 }}>
+        Use the following buttons to select events by day and category
+      </Typography>
+
       <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 2 }}>
         {['weekend', 'saturday', 'sunday'].map((value) => {
           const label = value === 'weekend' ? 'Weekend' : value[0].toUpperCase() + value.slice(1)
