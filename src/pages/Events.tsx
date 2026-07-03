@@ -1,28 +1,88 @@
+import React from 'react'
 import { useMemo, useState } from 'react'
 import Typography from '@mui/material/Typography'
 import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemText from '@mui/material/ListItemText'
+
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import events from '../assets/data/eventdata.tsx'
 import RubContainer from '../components/RubContainer'
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Collapse from '@mui/material/Collapse';
+import IconButton from '@mui/material/IconButton';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+import eventData from '../assets/data/eventdata.tsx'
+
+function EventCard( {event}: {event: typeof eventData[0]} ) {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
+  // need a specific card component so that can have local state for accordion
+  return (
+    <Card sx={{ boxShadow: 6, mb: 1 }}>
+      <CardContent sx={{ pb: 0 }}>
+        <Typography variant="h5" align='left'>
+          {event.title}
+        </Typography>
+        <Typography variant="body2" align='left'>
+          Genre: {event.genre}
+        </Typography>
+        <Typography variant="body2" align='left'>
+          Starts: {event.day.charAt(0).toUpperCase() + event.day.slice(1)} at {event.startTime} for {event.duration} hours
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <IconButton onClick={handleExpandClick} sx={{ pb: 0, pt: 0 }}>
+          <Typography variant="h6" align='left'>
+            More information
+          </Typography>
+          <ExpandMoreIcon
+            aria-expanded={expanded}
+            aria-label="show more"
+          />
+
+        </IconButton>
+      </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Typography variant="body2" align='left' sx={{ mb: 1 }}>
+            {event.description}
+          </Typography>
+          <Typography variant="body2" align='left' sx={{ mb: 1 }}>
+            Rules: {event.rules}
+          </Typography>
+          <Typography variant="body2" align='left'>
+            {event.players} players, {event.tables} tables
+          </Typography>
+        </CardContent>
+      </Collapse>
+    </Card>
+  )
+}
+
+// Filter and sort event data based on button selection
 function Events() {
   const [selectedDay, setSelectedDay] = useState<'weekend' | 'saturday' | 'sunday'>('weekend')
   const [selectedType, setSelectedType] = useState<'all' | 'board' | 'miniatures'>('all')
 
   const filteredEvents = useMemo(() => {
-    // filter by day
-    const byDay = selectedDay === 'weekend' ? events : events.filter((ev) => ev.day.toLowerCase() === selectedDay)
+    const filtered = eventData
+      .filter((item) => selectedDay === 'weekend' ? true : item.day.toLowerCase() === selectedDay)
+      .filter((item) => selectedType === 'all' ? true : item.type === selectedType)
 
-    // filter each day's events by type
-    const byType = byDay
-      .map((ev) => ({ ...ev, events: ev.events.filter((item) => selectedType === 'all' ? true : item.type === selectedType) }))
-      .filter((ev) => ev.events.length > 0)
+    const grouped = ['saturday', 'sunday']
+      .map((day) => ({ day, events: filtered.filter((item) => item.day.toLowerCase() === day) }))
+      .filter((group) => group.events.length > 0)
 
-    return byType
+    return grouped
   }, [selectedDay, selectedType])
+
+  
 
   return (
     <RubContainer>
@@ -70,20 +130,18 @@ function Events() {
           )
         })}
       </Box>
-
       <List>
         {filteredEvents.map((ev) => (
           <div key={ev.day}>
-            <Typography variant="h5" sx={{ mt: 2, mb: 1 }} align='left'>
-              {ev.day}
+            
+            <Typography variant="h5" align='left'>
+              {ev.day.charAt(0).toUpperCase() + ev.day.slice(1)}
             </Typography>
             {ev.events.map((item) => (
-              <ListItem key={item.title} alignItems="flex-start">
-                <ListItemText
-                  primary={item.title}
-                  secondary={`${item.startTime} • ${item.duration} hours • ${item.description}`}
-                />
-              </ListItem>
+              <>
+                <EventCard event={item} />
+                
+              </>
             ))}
           </div>
         ))}
