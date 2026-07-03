@@ -15,6 +15,16 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import eventData from '../assets/data/eventdata.tsx'
 
+// function to format time from 24 hour expressed as number to string
+function formatTime(time: number): string  {
+  if (time < 1200 ) {
+  return (time/100).toString() + ' am'
+  } else {
+    return ((time-1200)/100).toString() + ' pm'
+  }
+}
+
+// need a specific card component so that can have local state for accordion
 function EventCard( {event}: {event: typeof eventData[0]} ) {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -22,7 +32,6 @@ function EventCard( {event}: {event: typeof eventData[0]} ) {
     setExpanded(!expanded);
   };
 
-  // need a specific card component so that can have local state for accordion
   return (
     <Card sx={{ boxShadow: 6, mb: 1 }}>
       <CardContent sx={{ pb: 0 }}>
@@ -30,10 +39,10 @@ function EventCard( {event}: {event: typeof eventData[0]} ) {
           {event.title}
         </Typography>
         <Typography variant="body2" align='left'>
-          Genre: {event.genre}
+          Genre: {event.genre} ({event.type})
         </Typography>
         <Typography variant="body2" align='left'>
-          Starts: {event.day.charAt(0).toUpperCase() + event.day.slice(1)} at {event.startTime} for {event.duration} hours
+          Starts: {event.day.charAt(0).toUpperCase() + event.day.slice(1)} at {formatTime(event.startTime)} for {event.duration} hours
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -65,7 +74,7 @@ function EventCard( {event}: {event: typeof eventData[0]} ) {
   )
 }
 
-// Filter and sort event data based on button selection
+// exported component for this page
 function Events() {
   const [selectedDay, setSelectedDay] = useState<'weekend' | 'saturday' | 'sunday'>('weekend')
   const [selectedType, setSelectedType] = useState<'all' | 'board' | 'miniatures'>('all')
@@ -78,7 +87,6 @@ function Events() {
     const grouped = ['saturday', 'sunday']
       .map((day) => ({ day, events: filtered.filter((item) => item.day.toLowerCase() === day) }))
       .filter((group) => group.events.length > 0)
-
     return grouped
   }, [selectedDay, selectedType])
 
@@ -137,7 +145,7 @@ function Events() {
             <Typography variant="h5" align='left'>
               {ev.day.charAt(0).toUpperCase() + ev.day.slice(1)}
             </Typography>
-            {ev.events.map((item) => (
+            {ev.events.sort((a, b) => a.startTime - b.startTime).map((item) => (
               <>
                 <EventCard event={item} />
                 
