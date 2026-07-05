@@ -68,6 +68,9 @@ function EventCard( {event}: {event: typeof eventData[0]} ) {
           <Typography variant="body2" align='left'>
             {event.players} players, {event.tables} tables
           </Typography>
+          <Typography variant="body2" align='left'>
+            GM: {event.gm}
+          </Typography>
         </CardContent>
       </Collapse>
     </Card>
