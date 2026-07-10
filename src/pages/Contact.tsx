@@ -5,17 +5,16 @@ import RubContainer from '../components/RubContainer'
 function Contact() {
   return (
     <RubContainer>
-      <Typography variant="h4" component="h1" gutterBottom>
+      <Typography variant="h4" component="h1" gutterBottom align='left'>
         Contact
       </Typography>
-      <Typography component="p" sx={{ mb: 2 }}>
-        Have questions about RubiCon? Reach out to us using the details below.
+      <Typography component="p" sx={{ mb: 2 }} align='left'>
+        Have questions about RubiCon? Use email or contact Game Kastle
       </Typography>
-      <Box component="address" sx={{ fontStyle: 'normal', mt: 2 }}>
-        <Typography variant="subtitle1">Event Team</Typography>
-        <Typography>Game Kastle Sacramento</Typography>
-        <Typography>Email: <a href="mailto:contact@rubicon.example">contact@rubicon.example</a></Typography>
-        <Typography>Phone: (555) 123-4567</Typography>
+      <Box component="address" sx={{ fontStyle: 'normal', mt: 2 }} >
+        <Typography>Game Kastle Sacramento Phone: (916) 891 5233</Typography>
+        <Typography>Organizer Email: <a href="mailto:RubiconWargameSac@gmail.com">RubiconWargameSac@gmail.com</a></Typography>
+        <Typography></Typography>
       </Box>
     </RubContainer>
   )

@@ -20,7 +20,7 @@ export default function Footer() {
         <Box component={RouterLink} to="/" >
           <Box component="img" src={logo} alt="RubiCon logo" sx={{ height: '3rem' }} />
           <Typography variant="body2" sx={{ color: 'white'}} >
-            © {new Date().getFullYear()} RubiCon. All rights reserved.
+            © {new Date().getFullYear()} Rubicon. All rights reserved.
           </Typography>
         </Box>
         <Box component="img" src={caesar} alt="Caesar" sx={{ height: '5rem', mt: 1 }} />

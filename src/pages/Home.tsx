@@ -8,10 +8,10 @@ function Home() {
   return (
     <>
       <RubContainer>
-        <Typography variant="h1" align='left' sx={{ mt: 3, mb: 3 }}>Welcome to RubiCon</Typography>
+        <Typography variant="h1" align='left' sx={{ mt: 3, mb: 3 }}>Welcome to Rubicon</Typography>
         <Typography variant="h3" align='left'>What</Typography>
         <Typography align='left'>
-          Rubicon is a one off conference that replaces VetCon. VetCon (in Auburn, CA) is not being held this year as the host hotel is being refurbished
+          Rubicon is a popup wargame convention focused on miniature games and historical boardgames
         </Typography>
 
         <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>When</Typography>
@@ -38,8 +38,8 @@ function Home() {
           Games
         </Typography>
         <Typography align='left'>
-          See <a href="/events">Events</a> page: Miniature wargaming, board wargames. 
-          Note that we are not expecting to run tournaments, due to space limitations. Most games are multi player.
+          See <a href="/events">Events</a> page. 
+          For miniature wargames, there is a focus on multiplayer participation games. For historical boardgames, from 2-8 players.
           If you would like to run a game, please go to the <a href="/gm">GM</a> page to find details and how to submit your game.
         </Typography>
         <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>Cost</Typography>
