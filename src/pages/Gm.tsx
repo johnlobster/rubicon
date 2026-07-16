@@ -1,3 +1,4 @@
+import gameSubmit from '../functions/gameSubmit';
 import RubContainer from '../components/RubContainer'
 import Typography from '@mui/material/Typography'
 import Paper from '@mui/material/Paper';
@@ -19,25 +20,26 @@ const textFieldSx = {
   },
 };
 
+
 // copied from Google Material UI docs for box shadow
 // 0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12),0 3px 5px -1px rgba(0,0,0,.2)!important
 
-function testHandleSubmit(event) {
-  event.preventDefault();
+// function testHandleSubmit(React.SubmitForm) {
+//   event.preventDefault();
 
-  const form = event.currentTarget;
-  const values = Array.from(form.querySelectorAll('input, textarea, select'))
-    .filter((element) => element.type !== 'submit' && element.type !== 'button')
-    .reduce((result, element) => {
-      const key = element.name || element.id || 'unknown';
-      return {
-        ...result,
-        [key]: element.value,
-      };
-    }, {});
+//   const form = event.currentTarget;
+//   const values = Array.from(form.querySelectorAll('input, textarea, select'))
+//     .filter((element) => element.type !== 'submit' && element.type !== 'button')
+//     .reduce((result, element) => {
+//       const key = element.name || element.id || 'unknown';
+//       return {
+//         ...result,
+//         [key]: element.value,
+//       };
+//     }, {});
 
-  console.log('Form inputs:', values);
-}
+//   console.log('Form inputs:', values);
+// }
 
 function Gm() {
   return (
@@ -63,7 +65,7 @@ function Gm() {
           component="form"
           noValidate
           autoComplete="off"
-          onSubmit={testHandleSubmit}
+          onSubmit={e => gameSubmit(e, 'console')}
         >
         <Grid container spacing={2} sx={{ p: 2, justifyContent: 'flex-start' }}>
           <Grid size={{ xs: 12, sm: 6, lg:4}} >
