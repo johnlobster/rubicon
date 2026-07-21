@@ -26,6 +26,7 @@ https://github.com/johnlobster/rubicon
 ### Cloudflare pages
 
 Deployed at https://rubicon-6k5.pages.dev/
+Domain rubiconsac.com registered with Cloudflare
 
 ## Build notes
 

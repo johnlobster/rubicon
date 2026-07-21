@@ -7,6 +7,7 @@ import Forage from './pages/Forage'
 import Events from './pages/Events'
 import Gm from './pages/Gm'
 import Contact from './pages/Contact'
+import Sale from './pages/Sale'
 import NotFound from './pages/NotFound'
 import Footer from './components/Footer'
 import Container from '@mui/material/Container'
@@ -20,12 +21,12 @@ const navItems = [
   { label: 'Billet', path: '/billet' },
   { label: 'Forage', path: '/forage' },
   { label: 'GM', path: '/gm' },
-  { label: 'Contact', path: '/contact' },
-  { label: 'About', path: '/about' },
+  { label: 'About', path: '/about'},
+  { label: 'Contact', path: '/contact'},
+  { label: 'Sale', path: '/sale' },
 ]
 
 function App() {
-
   return (
     <div>
     <Container   maxWidth="lg" >
@@ -38,6 +39,7 @@ function App() {
           <Route path="/billet" element={<Billet />} />
           <Route path="/forage" element={<Forage />} />
           <Route path="/gm" element={<Gm />} />
+          <Route path="/sale" element={<Sale />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

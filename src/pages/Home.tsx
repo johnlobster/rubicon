@@ -42,10 +42,17 @@ function Home() {
           For miniature wargames, there is a focus on multiplayer participation games. For historical boardgames, from 2-8 players.
           If you would like to run a game, please go to the <a href="/gm">GM</a> page to find details and how to submit your game.
         </Typography>
+
         <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>Cost</Typography>
         <Typography align='left'>
           $25 for the weekend, $15 for Saturday, $10 for Sunday. Contact Game Kastle for more information. Limited amount of free tickets for Game Masters.
         </Typography>
+
+        <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>Flea market</Typography>
+        <Typography align='left'>
+          See <a href="/sale">Sale</a> page. Details not finalized. 
+        </Typography>
+
       <section id="spacer"></section>
       </RubContainer>
     </>
