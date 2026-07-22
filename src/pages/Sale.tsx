@@ -8,7 +8,7 @@ function Sale() {
         Flea market
       </Typography>
       <Typography align="left">
-        Details to follow
+        Flea market will be on the Sunday (times to be finialized). Tables are $10 each, for GMs and weekend pass purchasers
       </Typography>
     </RubContainer>
   )

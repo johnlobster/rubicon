@@ -45,12 +45,12 @@ function Home() {
 
         <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>Cost</Typography>
         <Typography align='left'>
-          $25 for the weekend, $15 for Saturday, $10 for Sunday. Contact Game Kastle for more information. Limited amount of free tickets for Game Masters.
+          $20 for the weekend, $15 for Saturday, $10 for Sunday. Contact Game Kastle for more information. Limited amount of free tickets for Game Masters.
         </Typography>
 
         <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>Flea market</Typography>
         <Typography align='left'>
-          See <a href="/sale">Sale</a> page. Details not finalized. 
+          See <a href="/sale">Sale</a> page. Will be on the Sunday. Tables are $10 and available for GMs and weekend pass purchasers 
         </Typography>
 
       <section id="spacer"></section>
