@@ -70,6 +70,8 @@ const theme = createTheme({
         lineHeight: `${(3 * rhythm)}rem`,
         
       },
+      color: '#4B5320', // Military Green  
+
     },
     h4: {
       fontFamily: "'Australian Flying Corps Stencil', 'Roboto', serif",
@@ -80,6 +82,8 @@ const theme = createTheme({
         lineHeight: `${(2 * rhythm)}rem`,
 
       },
+      color: '#4B5320', // Military Green  
+
     },
     h5: {
       fontWeight: 'bold',
@@ -90,6 +94,8 @@ const theme = createTheme({
         lineHeight: `${(1.75 * rhythm)}rem`,
 
       },
+      color: '#4B5320', // Military Green  
+
     },
     h6: {
       fontWeight: 'bold',
@@ -100,6 +106,8 @@ const theme = createTheme({
         lineHeight: `${(1.3 * rhythm)}rem`,
 
       },
+      color: '#4B5320', // Military Green  
+
     },
     
 

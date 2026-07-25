@@ -31,7 +31,7 @@ function TextToParagraphs({ textString} : {textString: string}) {
   return (
     paraArray.map( s => {
       return(
-        <Typography variant="body2" align='left' sx={{pb: 2}}>
+        <Typography variant="body2" align='left' sx={{pb: 1}}>
           {s}
         </Typography>
       )
@@ -54,10 +54,10 @@ function EventCard( {event}: {event: typeof eventData[0]} ) {
           {event.title}
         </Typography>
         <Typography variant="body2" align='left'>
-          Genre: {event.genre} ({event.type})
+          <b>Genre:</b> {event.genre} ({event.type})
         </Typography>
         <Typography variant="body2" align='left'>
-          Starts: {event.day.charAt(0).toUpperCase() + event.day.slice(1)} at {formatTime(event.startTime)} for {event.duration} hours
+          <b>Starts: </b>{event.day.charAt(0).toUpperCase() + event.day.slice(1)} at {formatTime(event.startTime)} for {event.duration} hours
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -76,13 +76,13 @@ function EventCard( {event}: {event: typeof eventData[0]} ) {
         <CardContent>
           <TextToParagraphs textString={event.description} />
           <Typography variant="body2" align='left' sx={{ mb: 1 }}>
-            Rules: {event.rules}
+            <b>Rules: </b>{event.rules}
           </Typography>
           <Typography variant="body2" align='left'>
             {event.players} players, {event.tables} tables
           </Typography>
           <Typography variant="body2" align='left'>
-            GM: {event.gm}
+            <b>GM: </b>{event.gm}
           </Typography>
         </CardContent>
       </Collapse>
