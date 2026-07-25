@@ -24,6 +24,21 @@ function formatTime(time: number): string  {
   }
 }
 
+// component to convert a string with \n into multiple paragraphs
+function TextToParagraphs({ textString} : {textString: string}) {
+
+  const paraArray = textString.split('\n')
+  return (
+    paraArray.map( s => {
+      return(
+        <Typography variant="body2" align='left' sx={{pb: 2}}>
+          {s}
+        </Typography>
+      )
+    })
+
+  )
+}
 // need a specific card component so that can have local state for accordion
 function EventCard( {event}: {event: typeof eventData[0]} ) {
   const [expanded, setExpanded] = React.useState(false);
@@ -59,9 +74,7 @@ function EventCard( {event}: {event: typeof eventData[0]} ) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography variant="body2" align='left' sx={{ mb: 1 }}>
-            {event.description}
-          </Typography>
+          <TextToParagraphs textString={event.description} />
           <Typography variant="body2" align='left' sx={{ mb: 1 }}>
             Rules: {event.rules}
           </Typography>
