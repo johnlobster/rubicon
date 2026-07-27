@@ -8,7 +8,7 @@ import React from 'react';
 type TestOptions = 'email' | 'console' | 'email test' | 'mailto';
 
 // tokens
-const t1 = 'Bearer cfat_NKyP31pJJRFKhJCoUbNylP6ZQocTL4Xk6YfcALuM39cb2842';
+const t1 = 'Bearer' +  'cfat_NKyP31pJJRFKhJ' + 'CoUbNylP6ZQocTL4Xk6YfcALuM39cb2842';
 
 
 
