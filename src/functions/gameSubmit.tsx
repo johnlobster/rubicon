@@ -7,7 +7,8 @@ import React from 'react';
 
 type TestOptions = 'email' | 'console' | 'email test' | 'mailto';
 
-
+// tokens
+const t1 = 'Bearer cfat_NKyP31pJJRFKhJCoUbNylP6ZQocTL4Xk6YfcALuM39cb2842';
 /* Email example: use on bash command line
       curl "https://api.cloudflare.com/client/v4/accounts/b9f8511346108b063322a1f274efb702/email/sending/send" \
       --header "Authorization: Bearer cfat_NKyP31pJJRFKhJCoUbNylP6ZQocTL4Xk6YfcALuM39cb2842" \
@@ -129,7 +130,7 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
         headers: {
           'Content-Type': 'application/json',
           // Replace with a real Cloudflare API token or use a server-side proxy.
-          Authorization: 'Bearer cfat_NKyP31pJJRFKhJCoUbNylP6ZQocTL4Xk6YfcALuM39cb2842',
+          Authorization: t1
         },
         body: JSON.stringify(postBody),
       });
