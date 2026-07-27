@@ -1,7 +1,7 @@
 export type EventItem = {
-  id: number
+  id: number   // may not be required. Use in code to identify the event item
   day: 'saturday' | 'sunday'
-  type: 'board' | 'miniatures'
+  gameType: 'miniatures' | 'board'  
   title: string
   genre: string
   startTime: number
@@ -28,7 +28,7 @@ const eventData:EventItem[] = [
     gm: "John Webster",
     gmEmail: "johnlobster@comcast.net",
     gmPhone: "9167928734",
-    type: "miniatures",
+    gameType: "miniatures",
     description: "The French lost a major battle and are retreating. The rear guard is tasked with holding back the Allies (British and Spanish). There will be about 1000 miniatures on the table",
     rules:  "Valour and Fortitude, available for free from Perry Miniatures website. Fast play - expect Battalions to die quickly"
   },
@@ -45,7 +45,7 @@ const eventData:EventItem[] = [
     gmEmail: "johnlobster@comcast.net",
     gmPhone: "9167928734",
     players: "4-6",
-    type: "miniatures",
+    gameType: "miniatures",
     description: "Two forces meet in the desert, both sides are desperate and have brought everything they can find, which means swords, magic, beasts and flying carpets. Did I mention the camels ?",
     rules: "Dragon Rampant by Osprey modified for multiplayer."
   },
@@ -61,10 +61,10 @@ const eventData:EventItem[] = [
     gmEmail: "silverscribe@surewest.net",
     gmPhone:"9162014580",
     players: "4-6",
-    type: "miniatures",
+    gameType: "miniatures",
     description: `Unhappy Bishops, Harassed Tax Collectors, and Irritated Shire-reeves\n
   The evil forces of greed will be seeking to protect what isn't theirs while the forces of good will be trying to relieve them of their burdened consciences.  Oh, wait, they may not have any!  No matter, it is but an excuse for the slings and arrows of outrageous fun.\n
-  Players will run a few well known characters from either side of the Robin Hood mythos along with a few additional figures to boost numbers. A minimum of three groups of four figures for each player. Most of the primary characters come from the Robin Hood range from Splintered Light Miniatures as do most of the other figures. Will it be Sherwood Forest or, perhaps, the more sinister Silverwood Forest?\n
+  Players will run a few well known characters from either side of the Robin Hood mythos along with a few additional figures to boost numbers. A minimum of three groups of four figures for each player. Most of the primary characters come from the Robin Hood range from Splintered Light Miniatures as do most of the other figures. Will it be Sherwood Forest or, perhaps, the more sinister Sliverwood Forest?\n
   `,
     rules: "Fistful of Lead Bigger Battles with minor modifications"
   },

@@ -54,7 +54,7 @@ function EventCard( {event}: {event: typeof eventData[0]} ) {
           {event.title}
         </Typography>
         <Typography variant="body2" align='left'>
-          <b>Genre:</b> {event.genre} ({event.type})
+          <b>Genre:</b> {event.genre} ({event.gameType})
         </Typography>
         <Typography variant="body2" align='left'>
           <b>Starts: </b>{event.day.charAt(0).toUpperCase() + event.day.slice(1)} at {formatTime(event.startTime)} for {event.duration} hours

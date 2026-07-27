@@ -40,10 +40,10 @@
     see README.md for more details
     */
   @media screen and (max-width:259px) {
-    font-size: 8px;
+    font-size: 10px;
   }
   @media screen and (min-width:260px) and (max-width:329px) {
-    font-size: 8px;
+    font-size: 10px;
   }
   @media screen and (min-width:330px) and (max-width:399px) {
     font-size: 12px;

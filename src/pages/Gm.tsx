@@ -57,20 +57,21 @@ function Gm() {
       <Typography align="left">
         All tables are 6'x60". All game submissions need to be based on how many of those you need.
       </Typography>
-      <Typography align="left">
+      
+      <Box sx={{ textAlign: 'left'}}>
         All games should be:
       
-      <ul>
-        <li> Multiplayer unless they fit on a 2'x2' space</li>
-        <li> Fit on a 6'x60" table with a minimum of 4 players. 
-          Larger table sizes need to accommodate more players. 
-          For example, a 12'x 60" table should be able to accommodate 8 players.
-        </li>
-        <li>Games should be 4 hours, excluding setup and takedown, but can go longer based on a review of the submission</li>
-        <li>Any period of game is acceptable including Historical, Fantasy, Science Fiction, and post-Apocalyptic. Examples include; De Bellis Antiquitatis, Pillage, SAGA, Rank and File, Fistful of Lead, Sharp Practice, Bolt Action, and Gaslands, but virtually any game is acceptable.</li>
-      </ul>
+        <ul>
+          <li> Multiplayer unless they fit on a 2'x2' space</li>
+          <li> Fit on a 6'x60" table with a minimum of 4 players. 
+            Larger table sizes need to accommodate more players. 
+            For example, a 12'x 60" table should be able to accommodate 8 players.
+          </li>
+          <li>Games should be 4 hours, excluding setup and takedown, but can go longer based on a review of the submission</li>
+          <li>Any period of game is acceptable including Historical, Fantasy, Science Fiction, and post-Apocalyptic. Examples include; De Bellis Antiquitatis, Pillage, SAGA, Rank and File, Fistful of Lead, Sharp Practice, Bolt Action, and Gaslands, but virtually any game is acceptable.</li>
+        </ul>
 
-      </Typography>
+      </Box>
 
       <Typography align="left">
         If your game doesn't fit the exact criteria, send us an email to <a href="mailto:RubiconWargameSac@gmail.com">RubiconWargameSac@gmail.com</a>
@@ -88,9 +89,7 @@ function Gm() {
       If your game doesn't fit the exact criteria, send us an email to <a href="mailto:RubiconWargameSac@gmail.com">RubiconWargameSac@gmail.com</a>
       </Typography>
 
-      <Typography align="left" component="p" sx={{ mb: '1rem' }}>
-        Game Master resources and information.
-      </Typography>
+      
       <Typography variant="h3" gutterBottom align="left">
         Game submission form
       </Typography>
@@ -103,30 +102,30 @@ function Gm() {
           component="form"
           noValidate
           autoComplete="off"
-          onSubmit={e => gameSubmit(e, 'console')}
+          onSubmit={e => gameSubmit(e, 'email test')}
         >
         <Grid container spacing={2} sx={{ p: 2, justifyContent: 'flex-start' }}>
           <Grid size={{ xs: 12, sm: 6, lg:4}} >
             <TextField
-              id="gm" label="GM name (Required)" variant="outlined"
+              name="gm" label="GM name (Required)" variant="outlined"
               sx={textFieldSx}
               required
               fullWidth
             />
           </Grid>
           <Grid size={{ xs: 12, sm: 6, lg: 4 }} >
-            <TextField id="gmEmail" label="GM email" variant="outlined" sx={textFieldSx} fullWidth
+            <TextField name="gmEmail" label="GM email" variant="outlined" sx={textFieldSx} fullWidth
             />
             </Grid>
           <Grid size={{ xs: 12, sm: 6, lg: 4 }} >
-            <TextField id="gmPhone" label="GM phone contact" variant="outlined" sx={textFieldSx} fullWidth
+            <TextField name="gmPhone" label="GM phone contact" variant="outlined" sx={textFieldSx} fullWidth
             />
           </Grid>
         </Grid>
         <Grid container spacing={2} sx={{ p: 2, justifyContent: 'flex-start' }}>
           <Grid size={{ xs: 12, sm: 3}} >
             <TextField
-              id="day" label="Day (Required)" variant="outlined" sx={textFieldSx} fullWidth
+              name="day" id="day" label="Day (Required)" variant="outlined" sx={textFieldSx} fullWidth
               required
               select
               defaultValue="Saturday"
@@ -140,18 +139,18 @@ function Gm() {
           </Grid>
           <Grid size={{ xs: 12, sm: 3}} >
             <TextField
-              id="startTime" label="Start Time" variant="outlined" sx={textFieldSx} fullWidth
+              name="startTime" label="Start Time" variant="outlined" sx={textFieldSx} fullWidth
             />
             </Grid>
           <Grid size={{ xs: 12, sm: 3}} >
             <TextField
-              id="duration" label="Duration hours (Required)" variant="outlined" sx={textFieldSx} fullWidth
+              name="duration" label="Duration hours (Required)" variant="outlined" sx={textFieldSx} fullWidth
               required
             />
           </Grid>
           <Grid size={{ xs: 12, sm: 3}} >
             <TextField
-              id="tables" label="Number of Tables (Required)" variant="outlined" sx={textFieldSx} fullWidth
+              name="tables" label="Number of Tables (Required)" variant="outlined" sx={textFieldSx} fullWidth
               required
             />
           </Grid>
@@ -160,21 +159,22 @@ function Gm() {
         <Grid container spacing={2} sx={{ p: 2, justifyContent: 'flex-start' }}>
           <Grid size={{ xs: 12, sm: 4, lg: 4 }} sx={{ justifyContent: 'right' }}>
             <TextField
-              id="genre" label="Genre/Scale" variant="outlined" sx={textFieldSx} fullWidth 
+              name="genre" label="Genre/Scale" variant="outlined" sx={textFieldSx} fullWidth 
             />
           </Grid>
           <Grid size={{ xs: 12, sm: 4, lg: 4 }} >
             <TextField
-              id="players" label="Number of Players (Required)" variant="outlined" sx={textFieldSx} fullWidth
+              name="players" label="Number of Players (Required)" variant="outlined" sx={textFieldSx} fullWidth
               required
             />
           </Grid>
           <Grid size={{ xs: 12, sm: 4, lg: 4 }} >
             <TextField
-              id="type" label="Type  (required)" variant="outlined" sx={textFieldSx}
+              name="gameType" id="gameType" label="Type  (required)" variant="outlined" sx={textFieldSx}
               required
               select
               fullWidth
+              defaultValue="Miniatures"
             >
               {['Board', 'Miniatures'].map((option) => (
                 <MenuItem key={option} value={option.toLowerCase()}>
@@ -186,7 +186,7 @@ function Gm() {
         </Grid>
         <Box sx={{ p: 2, textAlign: 'left' }}>
         <TextField
-          id="title" label="Game Title (Required)" variant="outlined"
+          name="gameTitle" label="Game Title (Required)" variant="outlined"
           sx={textFieldSx}
           required
           fullWidth
@@ -194,7 +194,7 @@ function Gm() {
         </Box>
         <Box sx={{ p: 2, textAlign: 'left' }}>
         <TextField
-          id="description" label="Description (Required)" variant="outlined"
+          name="description" label="Description (Required)" variant="outlined"
           sx={textFieldSx}
           required
           fullWidth
@@ -203,7 +203,7 @@ function Gm() {
         </Box>
         <Box sx={{ p: 2, textAlign: 'left' }}>
         <TextField
-          id="rules" label="Rules" variant="outlined"
+          name="rules" label="Rules" variant="outlined"
           sx={textFieldSx}
           fullWidth
           multiline

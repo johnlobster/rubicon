@@ -32,6 +32,14 @@ Domain rubiconsac.com registered with Cloudflare
 
 ## Implementation notes
 
+### Cloudflare email service
+
+Should have been simple to send an Email using REST interface, but lots of small issues
+
+Had to create a 'from' email address e.g. `welcome@rubiconsac.com` This had to be defined as a routing rule (under Email Routing ), but action set to drop. 'from' is required
+
+`curl` was really useful in testing
+
 ### MUI
 
 I find MUI significantly harder to use than advertised. Defaults seem strange and have to wrap everything in `Typography`. Text for mobile is really big, so everything wraps all the time
