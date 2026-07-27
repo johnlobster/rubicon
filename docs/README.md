@@ -40,6 +40,24 @@ Had to create a 'from' email address e.g. `welcome@rubiconsac.com` This had to b
 
 `curl` was really useful in testing
 
+```
+/* Email example: use on bash command line
+      curl "https://api.cloudflare.com/client/v4/accounts/b9f8511346108b063322a1f274efb702/email/sending/send" \
+      --header "Authorization: Bearer cfat_NKyP31pJJRFKhJCoUbNylP6ZQocTL4Xk6YfcALuM39cb2842" \
+      --header "Content-Type: application/json" \
+      --data '{
+      "to": "johnlobster@comcast.net",
+      "from": "noreply@rubiconsac.com",
+      "subject": "Welcome to Rubicon",
+      "html": "<h1>Welcome!</h1><p>Thanks for signing up.</p>",
+      "text": "Test email"
+      }'
+
+curl -X GET "https://api.cloudflare.com/client/v4/accounts/b9f8511346108b063322a1f274efb702/tokens/verify" \
+-H "Authorization: Bearer cfat_NKyP31pJJRFKhJCoUbNylP6ZQocTL4Xk6YfcALuM39cb2842"
+*/
+```
+
 ### MUI
 
 I find MUI significantly harder to use than advertised. Defaults seem strange and have to wrap everything in `Typography`. Text for mobile is really big, so everything wraps all the time
