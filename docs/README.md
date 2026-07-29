@@ -38,25 +38,7 @@ Should have been simple to send an Email using REST interface, but lots of small
 
 Had to create a 'from' email address e.g. `welcome@rubiconsac.com` This had to be defined as a routing rule (under Email Routing ), but action set to drop. 'from' is required
 
-`curl` was really useful in testing
 
-```
-/* Email example: use on bash command line
-      curl "https://api.cloudflare.com/client/v4/accounts/b9f8511346108b063322a1f274efb702/email/sending/send" \
-      --header "Authorization: Bearer cfat_NKyP31pJJRFKhJCoUbNylP6ZQocTL4Xk6YfcALuM39cb2842" \
-      --header "Content-Type: application/json" \
-      --data '{
-      "to": "johnlobster@comcast.net",
-      "from": "noreply@rubiconsac.com",
-      "subject": "Welcome to Rubicon",
-      "html": "<h1>Welcome!</h1><p>Thanks for signing up.</p>",
-      "text": "Test email"
-      }'
-
-curl -X GET "https://api.cloudflare.com/client/v4/accounts/b9f8511346108b063322a1f274efb702/tokens/verify" \
--H "Authorization: Bearer cfat_NKyP31pJJRFKhJCoUbNylP6ZQocTL4Xk6YfcALuM39cb2842"
-*/
-```
 So the above of course doesn't work from the browser because CORS. I couldn't figure out how to add the correct header so attempting to use a cloudflare worker using the wrangler cli
 
 The other issue is that github has some kind of a filter that recognizes secrets and doesn't want them in the code

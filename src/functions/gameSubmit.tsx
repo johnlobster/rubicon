@@ -96,32 +96,7 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
     
     console.log("Email test")
     console.log(postBody)
-    // Example of a POST request to  to send an email
-    // --header "Content-Type: application/json"
-    // --data '{
-    //"to": "recipient@example.com",
-    // "from": "welcome@yourdomain.com",
-    // "subject": "Welcome to our service!",
-    // "html": "<h1>Welcome!</h1><p>Thanks for signing up.</p>",
-    // "text": "Welcome! Thanks for signing up."
-    // }'
-    /* try {
     
-      const response = await fetch(u1, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          // Replace with a real  or use a server-side proxy.
-          
-        },
-        body: JSON.stringify(postBody),
-      });
-
-      const data = await response.json();
-      console.log('Cloudflare response:', data);
-    } catch (error) {
-      console.error('Cloudflare POST error:', error);
-    } */
   }
 }
 
