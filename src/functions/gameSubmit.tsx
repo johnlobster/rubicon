@@ -96,7 +96,7 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
     
     console.log("Email test")
     console.log(postBody)
-    // Example of a POST request to Cloudflare API to send an email
+    // Example of a POST request to  to send an email
     // --header "Content-Type: application/json"
     // --data '{
     //"to": "recipient@example.com",
@@ -112,7 +112,7 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
         headers: {
           'Content-Type': 'application/json',
           // Replace with a real  or use a server-side proxy.
-          Authorization: t1
+          
         },
         body: JSON.stringify(postBody),
       });
