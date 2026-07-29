@@ -1,12 +1,25 @@
 import React from 'react';
+import emailjs from '@emailjs/browser';
 
 // gameSubmit has been put into a separate file for easier testing
 // in normal operation POSTs to Cloudflare API to send email
 // used in Gm.tsx to handle form submission
 // async function because of fetch() call to Cloudflare API
 
-type TestOptions = 'email' | 'console' | 'email test' | 'mailto';
+type TestOptions = 'email' | 'console' | 'email test' ;
 
+emailjs.init({
+  publicKey: 'pHc98eKSD-85Bw4Lc',
+  // Do not allow headless browsers
+  blockHeadless: true,
+  
+  limitRate: {
+    // Set the limit rate for the application
+    id: 'app',
+    // Allow 1 request per second
+    throttle: 1000,
+  },
+});
 
 async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = 'console') {
   event.preventDefault();
@@ -44,6 +57,18 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
     };
   });
 
+  function getFormValue (field:string) {
+    let r = "";
+    elements.forEach((element) => {
+      if (element.name === field) {
+        if (element.value.length !== 0) {
+          r = Array.isArray(element.value) ? element.value.join(', ') : element.value
+        }
+      }
+    })
+    return r;
+  }
+
   // turns the elements array into a data structure for pasting into eventdata.tsx
   function createDS () {
     let resultString = "{\n  id: 100,\n"; // id is a large value to be filled in when pasting
@@ -79,23 +104,24 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
     console.log(elements);
     console.log(createDS());
 
-  } else if (testOptions === 'mailto') {
-    console.log(createDS());
-  
-
   } else if (testOptions === 'email test') {
-    // build body of POST request
-    let postBody:string = "";
-    postBody = postBody + '--header "Content - Type: application / json"'
-    postBody = postBody + "-- data'{ "
-    postBody = postBody + '"to": "johnlobster@comcast.net",'
-    postBody = postBody + '"from": "noreply@rubiconsac.com",'
-    postBody = postBody + '"subject": "Welcome to our service!"'
-    postBody = postBody + '"text": "Test message from Rubicon submit via Cloudflare"'
-    postBody = postBody + "}'"
-    
     console.log("Email test")
-    console.log(postBody)
+
+    const templateParams = {
+      email: 'johnlobsterg@gmail.com',
+      gmName: getFormValue("gm"),
+      title: getFormValue("gameTitle"),
+      messageBody: createDS()
+    };
+    
+    emailjs.send('service_22vky32', 'template_edlkd2m', templateParams).then(
+      (response) => {
+        console.log('Email SUCCESS!', response.status, response.text);
+      },
+      (error) => {
+        console.log('Email FAILED...', error);
+      },
+    );
     
   }
 }
