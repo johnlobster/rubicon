@@ -7,9 +7,6 @@ import React from 'react';
 
 type TestOptions = 'email' | 'console' | 'email test' | 'mailto';
 
-// tokens
-
-
 
 async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = 'console') {
   event.preventDefault();
@@ -114,7 +111,7 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          // Replace with a real Cloudflare API token or use a server-side proxy.
+          // Replace with a real  or use a server-side proxy.
           Authorization: t1
         },
         body: JSON.stringify(postBody),
