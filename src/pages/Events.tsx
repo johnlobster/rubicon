@@ -98,7 +98,7 @@ function Events() {
   const filteredEvents = useMemo(() => {
     const filtered = eventData
       .filter((item) => selectedDay === 'weekend' ? true : item.day.toLowerCase() === selectedDay)
-      .filter((item) => selectedType === 'all' ? true : item.type === selectedType)
+      .filter((item) => selectedType === 'all' ? true : item.gameType === selectedType)
 
     const grouped = ['saturday', 'sunday']
       .map((day) => ({ day, events: filtered.filter((item) => item.day.toLowerCase() === day) }))
