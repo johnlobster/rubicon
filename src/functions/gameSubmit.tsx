@@ -8,8 +8,7 @@ import React from 'react';
 type TestOptions = 'email' | 'console' | 'email test' | 'mailto';
 
 // tokens
-const t1 = 'Bearer' +  'cfat_NKyP31pJJRFKhJ' + 'CoUbNylP6ZQocTL4Xk6YfcALuM39cb2842';
-const u1 = 'https://api.cloudflare.com/client/v4/accounts/b9f8511346108b063322a1f274efb702/email/sending/send';
+
 
 
 async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = 'console') {
@@ -109,7 +108,7 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
     // "html": "<h1>Welcome!</h1><p>Thanks for signing up.</p>",
     // "text": "Welcome! Thanks for signing up."
     // }'
-    try {
+    /* try {
     
       const response = await fetch(u1, {
         method: 'POST',
@@ -125,7 +124,7 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
       console.log('Cloudflare response:', data);
     } catch (error) {
       console.error('Cloudflare POST error:', error);
-    }
+    } */
   }
 }
 

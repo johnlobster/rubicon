@@ -68,6 +68,22 @@ const eventData:EventItem[] = [
   `,
     rules: "Fistful of Lead Bigger Battles with minor modifications"
   },
+  {
+    id: 3,
+    day: "saturday",
+    title: "Into the Heart of Darkness",
+    genre: "Colonial Africa 25mm",
+    startTime: 1100,
+    duration: 4,
+    tables: 1,
+    gm: "Charles Gomez",
+    gmEmail: "cgomez344@yahoo.com",
+    gmPhone: "",
+    players: "2-6",
+    gameType: "miniatures",
+    description: "For months, the remote mission station at St. Michael's Crossing stood as a lonely outpost of faith and civilization on the edge of the unexplored interior.  Its founder Father Mathias was known to distant villages treating the sick, mediating tribal disputes and spreading the Gospel.  Three weeks ago, the mission fell silent.  The colonial Governor has ordered three expeditionary forces to go into the interior and find Father Mathias and return him safely.",
+    rules: "The Men Who Would Be Kings (some house rules)"
+  },
   
 ];
     

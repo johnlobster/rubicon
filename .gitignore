@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+# wrangler because was experimental
+wrangler
 
 # input file temp/intermediates
 inputs/*.zip

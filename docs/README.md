@@ -57,6 +57,11 @@ curl -X GET "https://api.cloudflare.com/client/v4/accounts/b9f8511346108b063322a
 -H "Authorization: Bearer cfat_NKyP31pJJRFKhJCoUbNylP6ZQocTL4Xk6YfcALuM39cb2842"
 */
 ```
+So the above of course doesn't work from the browser because CORS. I couldn't figure out how to add the correct header so attempting to use a cloudflare worker using the wrangler cli
+
+The other issue is that github has some kind of a filter that recognizes secrets and doesn't want them in the code
+
+
 
 ### MUI
 
