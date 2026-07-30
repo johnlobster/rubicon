@@ -99,6 +99,10 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
     return resultString;
 
   }
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // send messages according to test mode
+  let message = createDS()
+
   if (testOptions === 'console') {
     console.log("Form data")
     console.log(elements);
@@ -106,12 +110,11 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
 
   } else if (testOptions === 'email test') {
     console.log("Email test")
-
+    
+    message = `${getFormValue("gm")} kindly submitted a game called ${getFormValue("gameTitle")} \n\n ${message}`
     const templateParams = {
       email: 'johnlobsterg@gmail.com',
-      gmName: getFormValue("gm"),
-      title: getFormValue("gameTitle"),
-      messageBody: createDS()
+      messageBody: message
     };
     
     emailjs.send('service_22vky32', 'template_edlkd2m', templateParams).then(
@@ -123,6 +126,49 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
       },
     );
     
+  } else {
+    // Send email by default : one email to Rubicon team, confirmation to submitter
+    console.log("Form submission, send out emails")
+
+    message = `${getFormValue("gm")} kindly submitted a game called ${getFormValue("gameTitle")} \n\n ${message}`
+    const templateParams = {
+      email: 'rubiconwargamesac@gmail.com',
+      messageBody: message
+    };
+    emailjs.send('service_22vky32', 'template_edlkd2m', templateParams).then(
+      (response) => {
+        console.log('Email to Rubicon team SUCCESS!', response.status, response.text);
+      },
+      (error) => {
+        console.log('Email to Rubicon team FAILED...', error);
+      },
+    );
+    // send a confirmation to submitter (gmEmail) if the email is valid
+    if (getFormValue("gmEmail").length !== 0) {
+      
+      if (getFormValue("gm").length !== 0) {
+        // valid name of gm
+        message = `Thank you ${getFormValue("gm")} for submitting the event ${getFormValue("gameTitle")}\nMike will get back to you shortly\n\n${createDS()}`
+
+      } else {
+        message = `${message}`
+      }
+
+      const templateParams2 = {
+        email: 'rubiconwargamesac@gmail.com',
+        messageBody: message
+      };
+      emailjs.send('service_22vky32', 'template_edlkd2m', templateParams2).then(
+        (response) => {
+          console.log('Email to submitter SUCCESS!', response.status, response.text);
+        },
+        (error) => {
+          console.log('Email to submitter FAILED...', error);
+        },
+      );
+    } else {
+      console.log("Email sending from form submission, no gmEmail given")
+    }
   }
 }
 

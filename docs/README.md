@@ -32,9 +32,9 @@ Domain rubiconsac.com registered with Cloudflare
 
 ## Implementation notes
 
-### Cloudflare email service
+### Email service
 
-Should have been simple to send an Email using REST interface, but lots of small issues
+Should have been simple to use Cloudflare to send an Email using REST interface, but lots of small issues
 
 Had to create a 'from' email address e.g. `welcome@rubiconsac.com` This had to be defined as a routing rule (under Email Routing ), but action set to drop. 'from' is required
 
@@ -43,7 +43,9 @@ So the above of course doesn't work from the browser because CORS. I couldn't fi
 
 The other issue is that github has some kind of a filter that recognizes secrets and doesn't want them in the code
 
+EmailJS was the answer
 
+The method is a little strange. You fill in fields in a template held on EMailJS website, rather than composing the Email yourself, which puts two parts of the problem in different places, must be breaking some law of modularity
 
 ### MUI
 

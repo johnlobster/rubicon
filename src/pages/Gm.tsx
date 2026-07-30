@@ -93,16 +93,13 @@ function Gm() {
       <Typography variant="h3" gutterBottom align="left">
         Game submission form
       </Typography>
-      <Typography align="left" component="p" sx={{ mb: '1rem' }}>
-        This form isn't yet live, but it will be used to submit games for the event.  
-      </Typography>
 
       <Paper sx={{ boxShadow: 6, mt: 2 }}>
         <Box 
           component="form"
           noValidate
           autoComplete="off"
-          onSubmit={e => gameSubmit(e, 'email test')}
+          onSubmit={e => gameSubmit(e, 'email')}
         >
         <Grid container spacing={2} sx={{ p: 2, justifyContent: 'flex-start' }}>
           <Grid size={{ xs: 12, sm: 6, lg:4}} >
