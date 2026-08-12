@@ -16,7 +16,7 @@ function Home() {
 
         <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>When</Typography>
           <Typography align='left'>
-            November 7th-8th 2026. Saturday 10am-9pm. Sunday 10am-6pm. 
+            November 7th-8th 2026. Saturday 10am-9pm. Sunday 10am-7pm. 
           </Typography>
         <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>Where</Typography>
           <Typography align='left'>

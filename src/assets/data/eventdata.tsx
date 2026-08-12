@@ -84,7 +84,40 @@ const eventData:EventItem[] = [
     description: "For months, the remote mission station at St. Michael's Crossing stood as a lonely outpost of faith and civilization on the edge of the unexplored interior.  Its founder Father Mathias was known to distant villages treating the sick, mediating tribal disputes and spreading the Gospel.  Three weeks ago, the mission fell silent.  The colonial Governor has ordered three expeditionary forces to go into the interior and find Father Mathias and return him safely.",
     rules: "The Men Who Would Be Kings (some house rules)"
   },
-  
+  {
+    id: 4,
+    gm: "Aaron Martin",
+    gmEmail: "aaronmnewark@yahoo.com",
+    gmPhone: "510 396 3022",
+    day: 'sunday',
+    startTime: 1600,
+    duration: 3,
+    tables: 2,
+    genre: "WW1. Grand Strategic",
+    players: "4",
+    gameType: 'board',
+    title: "Versailles 1919",
+    description: "Diplomatic. Winners dividing up the world after failing in Crisis 1914",
+    rules: "Negotiating. Bidding. Avoiding unrest",
+
+  },
+  {
+    id: 5,
+    gm: "Aaron Martin",
+    gmEmail: "aaronmnewark@yahoo.com",
+    gmPhone: "510 396 3022",
+    day: 'saturday',
+    startTime: 1700,
+    duration: 3,
+    tables: 1,
+    genre: "card driven, grand strategic",
+    players: "5",
+    gameType: 'board',
+    title: "Crisis 1914",
+    description: "Diplomatic brinksmanship. France, Britain , Russia, Austria Hungary and Germany trying to avoid World War 1",
+    rules: "card driven. Press your luck.",
+
+  },
 ];
     
 
