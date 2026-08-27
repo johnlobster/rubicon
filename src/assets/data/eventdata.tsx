@@ -118,6 +118,47 @@ const eventData:EventItem[] = [
     rules: "card driven. Press your luck.",
 
   },
+  {
+    id: 6,
+    gm: "Roger Mark",
+    gmEmail: "crunchgrunt@gmail.com",
+    gmPhone: "9168994417",
+    day: 'sunday',
+    startTime: 1300,
+    duration: 4,
+    tables: 2,
+    genre: "ACW/10mm",
+    players: "4 to 5",
+    gameType: 'miniatures',
+    title: "The Devil's to pay! Gettysburg the first day.",
+    description: `First Day at Gettysburg.\n
+On the morning of July 1, 1863, Confederate troops from Archer’s brigade(under Heth) advanced from Cashtown toward Gettysburg seeking supplies, led by artillery because Stuart’s cavalry was absent.\n
+Expecting only militia that would flee, they instead met Buford’s Union cavalry on Herr’s Ridge.\n
+A sharp fight developed as Archer’s and Davis’s brigades pushed against the dismounted troopers, who held using rapid carbine fire.Around 9: 30 a.m., Union I Corps commander Reynolds arrived, asked Buford what was wrong, and received the reply: \“The Devil’s to pay!\”\n
+This unexpected clash marked the opening of the three- day Battle of Gettysburg; the first day’s decisions and fighting shaped the entire battle.
+`,
+
+    rules: "Slightly modified, (for miniatures instead of chits) Black Swan board game rules.",
+
+},
+  {
+    id: 7,
+    gm: "Kellen Dyer",
+    gmEmail: "kdyer.artist@gmail.com",
+    gmPhone: "530-409-1990",
+    day: 'saturday',
+    startTime: 1000,
+    duration: 10,
+    tables: 1,
+    genre: "Survival/Horror/Campaign/25mm-100mm",
+    players: "2-3",
+    gameType: 'miniatures',
+    title: "Kingdom Death: Monster",
+    description: `Berserk meets Monster Hunter.\n
+Four Survivors struggle to fight against massive grotesque monsters harvesting their resources for settlement survival.\n
+Join us in trying to build a thriving settlement against monsters that lurk in the dark. Harvest their resources to craft weapons and armor. Dice rolling contributes to extreme highs and lows while progressing a unique story. Rounds last about 1.5-2 hrs, players are free to come and go as they please. If a player is waiting I suggest swapping out at end of round or if your survivor dies. All are welcome to play I will keep this game PG and not openly display any of the games suggestive content, parents be advised or research before play. Please be respectful of your fellow players and the GM's components/painted miniatures.`,
+    rules: `"People of the Lantern" Campaign with Core 1.6 Rules, Expansions, and some fan content mixed in. `,
+  },
 ];
     
 
