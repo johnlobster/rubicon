@@ -159,6 +159,25 @@ Four Survivors struggle to fight against massive grotesque monsters harvesting t
 Join us in trying to build a thriving settlement against monsters that lurk in the dark. Harvest their resources to craft weapons and armor. Dice rolling contributes to extreme highs and lows while progressing a unique story. Rounds last about 1.5-2 hrs, players are free to come and go as they please. If a player is waiting I suggest swapping out at end of round or if your survivor dies. All are welcome to play I will keep this game PG and not openly display any of the games suggestive content, parents be advised or research before play. Please be respectful of your fellow players and the GM's components/painted miniatures.`,
     rules: `"People of the Lantern" Campaign with Core 1.6 Rules, Expansions, and some fan content mixed in. `,
   },
+  {
+    id:  8,
+    gm: "Dan Moreno",
+    gmEmail: "",
+    gmPhone: "9162413039",
+    day: 'sunday',
+    startTime: 1200,
+    duration: 4,
+    tables: 2 ,
+    genre: "WWII Bolt Action 28MM",
+    players: "4",
+    gameType: 'miniatures',
+    title: "Von Dyan Express",
+    description: `Bolt Action meets a railyard!\nThe trains have activation die, and move randomly move, or stays put per round. Don't get caught on a moving train, and don't block the tracks to avoid damage! Everything is provided, and built well for new players. Get a "crash" lesson in Bolt Action!
+`,
+    rules: "bolt Action V3 rules, with some modifications for the trains. (scenario play tested)",
+
+  },
+
 ];
     
 
