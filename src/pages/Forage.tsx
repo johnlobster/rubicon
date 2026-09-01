@@ -26,7 +26,9 @@ function Forage() {
         10 minutes away on Madison Ave. Try the Chinese food menu. You get two meals worth of food for a reasonable price.
         4321 Madison Ave suite A, Sacramento, CA 95842
       </Typography>
-      
+      <RubButton sx={{ mb: 2 }} >
+        4321 Madison Ave suite A, Sacramento, CA 95842
+      </RubButton>
       <Typography align='left' variant="h4" sx={{ mb: 2 }}>
         Fast food
       </Typography>
