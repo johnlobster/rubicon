@@ -53,6 +53,10 @@ function Home() {
           See <a href="/sale">Sale</a> page. Will be on the Sunday. Tables are $10 and available for GMs and weekend pass purchasers 
         </Typography>
 
+        <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>Local information</Typography>
+        <Typography align='left'>
+          For food, go to <a href="/forage">Forage</a> page. For accommodation,  go to <a href="/billet">Billet</a> page.
+        </Typography>
       <section id="spacer"></section>
       </RubContainer>
     </>

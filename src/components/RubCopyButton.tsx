@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
 import type { SxProps, Theme } from '@mui/material/styles'
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 interface RubContainerProps {
   children: ReactNode
@@ -14,7 +15,7 @@ export default function RubButton({ children, sx }: RubContainerProps) {
   return (
     <div>
       <Box sx={{ display: 'flex', mb: 1.5, gap: 0.6, maxWidth: '600px' }}>
-        <span>
+        <span style={{ paddingTop: '0.5rem' }}>
           {children}
         </span>
         <Button
@@ -24,12 +25,12 @@ export default function RubButton({ children, sx }: RubContainerProps) {
             boxShadow: (theme) => theme.shadows[8],
             mt: 0,
             mb: 0,
-            p: 0.5,
+            
             ...sx,
           }}
         >
-          COPY
-        </Button>
+          <ContentCopyIcon style={{ paddingRight: '0.5rem' }} />  COPY
+        </Button> 
       </Box>
     </div>
   )
