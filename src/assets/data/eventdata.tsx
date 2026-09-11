@@ -177,6 +177,41 @@ Join us in trying to build a thriving settlement against monsters that lurk in t
     rules: "bolt Action V3 rules, with some modifications for the trains. (scenario play tested)",
 
   },
+  {
+    id: 9,
+    gm: "Bob Burke",
+    gmEmail: "burker1@aol.com",
+    gmPhone: "9256997742",
+    day: 'saturday',
+    startTime: 1700,
+    duration: 5,
+    tables: 4,
+    genre: "28mm Samurai",
+    players: "6",
+    gameType: 'miniatures',
+    title: "Samurai Warfare",
+    description: `"Bushido, The Way of the Warrior," is a quick play skirmish game set in late 16th century Japan.\n
+This scenario is based on a “what-if” meeting of warring clans. Each clan is commanded by a Daimyo.`,
+rules: "Bushido, The Way of the Warrior",
+
+},
+  {
+    id: 10,
+    gm: "Stewart Blain",
+    gmEmail: "stewart.blain@gmail.com",
+    gmPhone: "510 393 8108",
+    day: 'saturday',
+    startTime: 1000,
+    duration: 4,
+    tables: 1,
+    genre: "Skirmish 28mm",
+    players: "5",
+    gameType: 'miniatures',
+    title: "This Quar’s War",
+    description: "This Quar’s War is a fantasy setting. A Quar is a humanoid Anteater, and they are fighting a WW1 style war, in a lush and vibrant world. The game also uses fresh mechanics, but ultimately it’s a solid squad skirmish game. ",
+    rules: "This Quar’s War: A Clash of Rhyfles. ",
+
+  },
 
 ];
     
