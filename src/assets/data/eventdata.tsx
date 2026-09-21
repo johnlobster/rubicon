@@ -212,6 +212,24 @@ rules: "Bushido, The Way of the Warrior",
     rules: "This Quar’s War: A Clash of Rhyfles. ",
 
   },
+  
+  {
+    id: 11,
+    gm: "Stewart Blain",
+    gmEmail: "stewart.blain@gmail.com",
+    gmPhone: "510 393 8108",
+    day: 'saturday',
+    startTime: 1600,
+    duration: 4,
+    tables: 1,
+    genre: "Skirmish 28mm",
+    players: "5",
+    gameType: 'miniatures',
+    title: "This Quar’s War",
+    description: "This Quar’s War is a fantasy setting. A Quar is a humanoid Anteater, and they are fighting a WW1 style war, in a lush and vibrant world. The game also uses fresh mechanics, but ultimately it’s a solid squad skirmish game. ",
+    rules: "This Quar’s War: A Clash of Rhyfles. ",
+
+  },
 
 ];
     
