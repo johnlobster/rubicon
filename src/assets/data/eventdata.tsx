@@ -230,6 +230,41 @@ rules: "Bushido, The Way of the Warrior",
     rules: "This Quar’s War: A Clash of Rhyfles. ",
 
   },
+  {
+id: 12,
+gm: "Pierre Martin",
+gmEmail: "pierreinreno@att.net",
+gmPhone: "775-530-7370",
+day: 'saturday',
+startTime: 1200,
+duration: 4,
+tables: 1,
+genre: "Sci/ Fi 28mm",
+players: "4",
+gameType: 'miniatures',
+title: "Learn to play Konflikt 47",
+description: "Play as the US with Firefly Jump troops, Jump Walkers and Tesla weapons or as the Axis with Zombies, Werewolves and Gravity Weapons. Everything is provided.",
+rules: "Warlord Games Konflikt 47.",
+
+},
+
+  {
+    id: 13,
+    gm: "Darren Wagerman",
+    gmEmail: "d.wagerman@outlook.com",
+    gmPhone: "9167996340",
+    day: 'sunday',
+    startTime: 1100,
+    duration: 4,
+    tables: 1,
+    genre: "28mm",
+    players: "4",
+    gameType: 'miniatures',
+    title: "Konflikt 47: Get the Scientist!",
+    description: "Wanted to learn Konflikt 47? Come join this beginner friendly game and join the Rift War, solider. 750 points, loaner armies may be available ",
+    rules: "Konflikt 47 by warlord games",
+
+  },
 
 ];
     
