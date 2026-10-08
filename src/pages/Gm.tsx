@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import gameSubmit from '../functions/gameSubmit';
 import RubContainer from '../components/RubContainer'
 import Typography from '@mui/material/Typography'
@@ -44,6 +44,12 @@ const textFieldSx = {
 
 function Gm() {
   const [submitted, setSubmitted] = useState(false);
+  const formRef = useRef<HTMLFormElement | null>(null);
+
+  const clearForm = () => {
+    formRef.current?.reset();
+    setSubmitted(false);
+  };
 
   return (
     <RubContainer>
@@ -105,6 +111,7 @@ function Gm() {
       <Paper sx={{ boxShadow: 6, mt: 2 }}>
         <Box 
           component="form"
+          ref={formRef}
           noValidate
           autoComplete="off"
           onKeyDown={(event) => {
@@ -225,6 +232,8 @@ function Gm() {
           multiline
         />
         </Box>
+        
+          
         <Button 
           type="submit"
           variant="contained" 
@@ -233,6 +242,16 @@ function Gm() {
         >
           Submit
         </Button>
+        <Button 
+          type="button"
+          variant="outlined"
+          color="secondary"
+          sx={{ m: 2 }}
+          onClick={clearForm}
+        >
+            Clear form
+        </Button>
+        
 
         {submitted && (
           <Typography variant="h5" >
