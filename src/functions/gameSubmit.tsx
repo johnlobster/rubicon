@@ -31,8 +31,8 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
 
   const form = event.currentTarget as HTMLFormElement;
   const formData = new FormData(form);
+  console.log('SUBMIT:')
   
-
   // Extract input, textarea, and select elements and their values into an array
   const elements = Array.from(
     form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>('input, textarea, select')
@@ -62,6 +62,7 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
     };
   });
 
+  
   function getFormValue (field:string) {
     let r = "";
     elements.forEach((element) => {

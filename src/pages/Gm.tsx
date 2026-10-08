@@ -107,6 +107,14 @@ function Gm() {
           component="form"
           noValidate
           autoComplete="off"
+          onKeyDown={(event) => {
+            const target = event.target as HTMLElement | null;
+            const tagName = target?.tagName;
+
+            if (event.key === 'Enter' && (tagName === 'INPUT' || tagName === 'SELECT')) {
+              event.preventDefault();
+            }
+          }}
           onSubmit={async (e) => {
             await gameSubmit(e, 'email test');
             setSubmitted(true);

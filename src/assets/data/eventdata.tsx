@@ -265,6 +265,23 @@ rules: "Warlord Games Konflikt 47.",
     rules: "Konflikt 47 by warlord games",
 
   },
+  {
+    id: 14,
+    gm: "Steve Marsh",
+    gmEmail: "STEPHENGMARSH@GMAIL.COM",
+    gmPhone: "9252721075",
+    day: 'sunday',
+    startTime: 1000,
+    duration: 4,
+    tables: 1,
+    genre: "WWII 28mm",
+    players: "2/4",
+    gameType: 'miniatures',
+    title: "Going with a Bang",
+    description: "France/Belgium 1940",
+    rules: "Chain of Command",
+
+  },
 
 ];
     
