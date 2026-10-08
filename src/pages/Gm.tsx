@@ -101,7 +101,6 @@ function Gm() {
       <Typography variant="h3" gutterBottom align="left">
         Game submission form
       </Typography>
-      
 
       <Paper sx={{ boxShadow: 6, mt: 2 }}>
         <Box 

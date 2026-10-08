@@ -17,7 +17,9 @@ import eventData from '../assets/data/eventdata.tsx'
 
 // function to format time from 24 hour expressed as number to string
 function formatTime(time: number): string  {
-  if (time < 1200 ) {
+  if (time === 1200) {
+    return 'noon'
+  } else if (time < 1200 ) {
   return (time/100).toString() + ' am'
   } else {
     return ((time-1200)/100).toString() + ' pm'
@@ -98,7 +100,7 @@ function Events() {
   const filteredEvents = useMemo(() => {
     const filtered = eventData
       .filter((item) => selectedDay === 'weekend' ? true : item.day.toLowerCase() === selectedDay)
-      .filter((item) => selectedType === 'all' ? true : item.type === selectedType)
+      .filter((item) => selectedType === 'all' ? true : item.gameType === selectedType)
 
     const grouped = ['saturday', 'sunday']
       .map((day) => ({ day, events: filtered.filter((item) => item.day.toLowerCase() === day) }))
