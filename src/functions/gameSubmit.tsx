@@ -7,6 +7,11 @@ import emailjs from '@emailjs/browser';
 // async function because of fetch() call to Cloudflare API
 
 type TestOptions = 'email' | 'console' | 'email test' ;
+/*
+  email - production
+  console - for testing, prints form data to console
+  email test - for testing, sends email only to johnlobsterg@gmail.com
+*/
 
 emailjs.init({
   publicKey: 'pHc98eKSD-85Bw4Lc',
