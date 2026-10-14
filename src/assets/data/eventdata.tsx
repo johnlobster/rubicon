@@ -13,6 +13,7 @@ export type EventItem = {
   gmPhone: string
   description: string
   rules: string
+  reserved: string[]
 }
 
 const eventData:EventItem[] = [
@@ -30,7 +31,10 @@ const eventData:EventItem[] = [
     gmPhone: "9167928734",
     gameType: "miniatures",
     description: "The French lost a major battle and are retreating. The rear guard is tasked with holding back the Allies (British and Spanish). There will be about 1000 miniatures on the table",
-    rules:  "Valour and Fortitude, available for free from Perry Miniatures website. Fast play - expect Battalions to die quickly"
+    rules:  "Valour and Fortitude, available for free from Perry Miniatures website. Fast play - expect Battalions to die quickly",
+    reserved: [
+      "Kevin Ball",
+    ],
   },
   
   {
@@ -47,7 +51,8 @@ const eventData:EventItem[] = [
     players: "4-6",
     gameType: "miniatures",
     description: "Two forces meet in the desert, both sides are desperate and have brought everything they can find, which means swords, magic, beasts and flying carpets. Did I mention the camels ?",
-    rules: "Dragon Rampant by Osprey modified for multiplayer."
+    rules: "Dragon Rampant by Osprey modified for multiplayer.",
+    reserved: [],
   },
   {
     id: 2,
@@ -66,7 +71,8 @@ const eventData:EventItem[] = [
   The evil forces of greed will be seeking to protect what isn't theirs while the forces of good will be trying to relieve them of their burdened consciences.  Oh, wait, they may not have any!  No matter, it is but an excuse for the slings and arrows of outrageous fun.\n
   Players will run a few well known characters from either side of the Robin Hood mythos along with a few additional figures to boost numbers. A minimum of three groups of four figures for each player. Most of the primary characters come from the Robin Hood range from Splintered Light Miniatures as do most of the other figures. Will it be Sherwood Forest or, perhaps, the more sinister Sliverwood Forest?\n
   `,
-    rules: "Fistful of Lead Bigger Battles with minor modifications"
+    rules: "Fistful of Lead Bigger Battles with minor modifications",
+    reserved: [],
   },
   {
     id: 3,
@@ -82,7 +88,8 @@ const eventData:EventItem[] = [
     players: "2-6",
     gameType: "miniatures",
     description: "For months, the remote mission station at St. Michael's Crossing stood as a lonely outpost of faith and civilization on the edge of the unexplored interior.  Its founder Father Mathias was known to distant villages treating the sick, mediating tribal disputes and spreading the Gospel.  Three weeks ago, the mission fell silent.  The colonial Governor has ordered three expeditionary forces to go into the interior and find Father Mathias and return him safely.",
-    rules: "The Men Who Would Be Kings (some house rules)"
+    rules: "The Men Who Would Be Kings (some house rules)",
+    reserved: [],
   },
   {
     id: 4,
@@ -99,6 +106,7 @@ const eventData:EventItem[] = [
     title: "Versailles 1919",
     description: "Diplomatic. Winners dividing up the world after failing in Crisis 1914",
     rules: "Negotiating. Bidding. Avoiding unrest",
+    reserved: [],
 
   },
   {
@@ -116,6 +124,7 @@ const eventData:EventItem[] = [
     title: "Crisis 1914",
     description: "Diplomatic brinksmanship. France, Britain , Russia, Austria Hungary and Germany trying to avoid World War 1",
     rules: "card driven. Press your luck.",
+    reserved: [],
 
   },
   {
@@ -139,6 +148,7 @@ This unexpected clash marked the opening of the three- day Battle of Gettysburg;
 `,
 
     rules: "Slightly modified, (for miniatures instead of chits) Black Swan board game rules.",
+    reserved: [],
 
 },
   {
@@ -158,6 +168,7 @@ This unexpected clash marked the opening of the three- day Battle of Gettysburg;
 Four Survivors struggle to fight against massive grotesque monsters harvesting their resources for settlement survival.\n
 Join us in trying to build a thriving settlement against monsters that lurk in the dark. Harvest their resources to craft weapons and armor. Dice rolling contributes to extreme highs and lows while progressing a unique story. Rounds last about 1.5-2 hrs, players are free to come and go as they please. If a player is waiting I suggest swapping out at end of round or if your survivor dies. All are welcome to play I will keep this game PG and not openly display any of the games suggestive content, parents be advised or research before play. Please be respectful of your fellow players and the GM's components/painted miniatures.`,
     rules: `"People of the Lantern" Campaign with Core 1.6 Rules, Expansions, and some fan content mixed in. `,
+    reserved: [],
   },
   {
     id:  8,
@@ -175,6 +186,9 @@ Join us in trying to build a thriving settlement against monsters that lurk in t
     description: `Bolt Action meets a railyard!\nThe trains have activation die, and move randomly move, or stays put per round. Don't get caught on a moving train, and don't block the tracks to avoid damage! Everything is provided, and built well for new players. Get a "crash" lesson in Bolt Action!
 `,
     rules: "bolt Action V3 rules, with some modifications for the trains. (scenario play tested)",
+    reserved: [
+      "Graham Mannasi",
+    ],
 
   },
   {
@@ -193,6 +207,7 @@ Join us in trying to build a thriving settlement against monsters that lurk in t
     description: `"Bushido, The Way of the Warrior," is a quick play skirmish game set in late 16th century Japan.\n
 This scenario is based on a “what-if” meeting of warring clans. Each clan is commanded by a Daimyo.`,
 rules: "Bushido, The Way of the Warrior",
+    reserved: [],
 
 },
   {
@@ -210,6 +225,7 @@ rules: "Bushido, The Way of the Warrior",
     title: "This Quar’s War",
     description: "This Quar’s War is a fantasy setting. A Quar is a humanoid Anteater, and they are fighting a WW1 style war, in a lush and vibrant world. The game also uses fresh mechanics, but ultimately it’s a solid squad skirmish game. ",
     rules: "This Quar’s War: A Clash of Rhyfles. ",
+    reserved: [],
 
   },
   
@@ -228,6 +244,7 @@ rules: "Bushido, The Way of the Warrior",
     title: "This Quar’s War",
     description: "This Quar’s War is a fantasy setting. A Quar is a humanoid Anteater, and they are fighting a WW1 style war, in a lush and vibrant world. The game also uses fresh mechanics, but ultimately it’s a solid squad skirmish game. ",
     rules: "This Quar’s War: A Clash of Rhyfles. ",
+    reserved: [],
 
   },
   {
@@ -245,6 +262,7 @@ gameType: 'miniatures',
 title: "Learn to play Konflikt 47",
 description: "Play as the US with Firefly Jump troops, Jump Walkers and Tesla weapons or as the Axis with Zombies, Werewolves and Gravity Weapons. Everything is provided.",
 rules: "Warlord Games Konflikt 47.",
+    reserved: [],
 
 },
 
@@ -263,6 +281,7 @@ rules: "Warlord Games Konflikt 47.",
     title: "Konflikt 47: Get the Scientist!",
     description: "Wanted to learn Konflikt 47? Come join this beginner friendly game and join the Rift War, solider. 750 points, loaner armies may be available ",
     rules: "Konflikt 47 by warlord games",
+    reserved: [],
 
   },
   {
@@ -280,6 +299,25 @@ rules: "Warlord Games Konflikt 47.",
     title: "Going with a Bang",
     description: "France/Belgium 1940",
     rules: "Chain of Command",
+    reserved: [],
+
+  },
+  {
+    id: 15,
+    gm: "Charles Gomez",
+    gmEmail: "cgomez344@yahoo.com",
+    gmPhone: "9168336020",
+    day: 'sunday',
+    startTime: 1100,
+    duration: 5,
+    tables: 1,
+    genre: "Colonial Africa 28mm",
+    players: "2 to 6",
+    gameType: 'miniatures',
+    title: "Ambush at Al-Mazra'a",
+    description: "A British River expedition has arrived at a fortified Arab trading settlement to relieve the local colonial population that has been ambushed by local Arab warlord. ",
+    rules: "The Men Who Would Be Kings (modified rally rules)",
+    reserved: [],
 
   },
 

@@ -86,6 +86,19 @@ function EventCard( {event}: {event: typeof eventData[0]} ) {
           <Typography variant="body2" align='left'>
             <b>GM: </b>{event.gm}
           </Typography>
+          {event.reserved.length !== 0 && 
+            <div>
+              <Typography variant="h6" align='left' sx={{ mt: 1 }}>
+              Places reserved for
+              </Typography>
+              {event.reserved.map((item, index) => (
+                <Typography variant="body2" align='left' key={item}>
+                  {item}
+                </Typography>
+              ))}
+            </div>
+        
+          }
         </CardContent>
       </Collapse>
     </Card>
