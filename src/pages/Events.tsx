@@ -91,7 +91,7 @@ function EventCard( {event}: {event: typeof eventData[0]} ) {
               <Typography variant="h6" align='left' sx={{ mt: 1 }}>
               Places reserved for
               </Typography>
-              {event.reserved.map((item, index) => (
+              {event.reserved.map((item) => (
                 <Typography variant="body2" align='left' key={item}>
                   {item}
                 </Typography>
