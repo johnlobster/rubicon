@@ -2,6 +2,9 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import RubContainer from '../components/RubContainer'
 import glogo from '../assets/images/gklogo.avif'
+import rData from '../assets/data/signup.tsx'
+import Button from '@mui/material/Button'
+import rsvpSubmit from '../functions/rsvp.tsx'
 
 function Home() {
   const img = <Box component="img" src={glogo} alt="Game Kastle logo" sx={{ height: 56, display: 'block' }} />
@@ -18,6 +21,30 @@ function Home() {
           <Typography align='left'>
             November 7th-8th 2026. Saturday 10am-9pm. Sunday 10am-7pm. 
           </Typography>
+
+        <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>Who</Typography>
+          
+            {rData.length < 20  ? (
+              <Typography align='left' sx={{ mb: '0.5rem' }}>
+                Lots of people are attending - how about you ?  
+              </Typography>
+            ) : (
+              <Typography align='left' sx={{ mb: '0.5rem' }} >
+                {rData.length} people are attending - how about you ?
+              </Typography>
+            )} 
+          <Button
+
+            color="primary"
+            variant='contained'
+
+
+          >
+            RSVP
+          </Button>
+            
+        
+
         <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>Where</Typography>
           <Typography align='left'>
             <Box component="a" 
