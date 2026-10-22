@@ -101,6 +101,7 @@ async function gameSubmit(event: React.SubmitEvent, testOptions: TestOptions = '
 
       }
     });
+    resultString += "reserved: [],\n"  // part of event data, but not entered using form
     resultString += "\n},"
     return resultString;
 

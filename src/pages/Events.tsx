@@ -77,10 +77,12 @@ function EventCard( {event}: {event: typeof eventData[0]} ) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <TextToParagraphs textString={event.description} />
+          {event.rules.length !== 0 &&
+            <Typography variant="body2" align='left' sx={{ mb: 1 }}>
+              <b>Rules: </b>{event.rules}
+            </Typography>
+          }
           <Typography variant="body2" align='left' sx={{ mb: 1 }}>
-            <b>Rules: </b>{event.rules}
-          </Typography>
-          <Typography variant="body2" align='left'>
             {event.players} players, {event.tables} tables
           </Typography>
           <Typography variant="body2" align='left'>

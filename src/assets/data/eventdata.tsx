@@ -320,6 +320,51 @@ rules: "Warlord Games Konflikt 47.",
     reserved: [],
 
   },
+  {
+    id: 16,
+    gm: "Melinda Maru",
+    gmEmail: "Melindaharvey1121@gmail.com",
+    gmPhone: "916-877-1121",
+    day: 'saturday',
+    startTime: 1400,
+    duration: 2,
+    tables: 1,
+    genre: "Artistic board game ",
+    players: "4-6",
+    gameType: 'board',
+    title: "Canvas ",
+    rules: "",
+    description: `
+  Canvas is a light card-drafting and crafting board game where players compete as artists in a prestigious art festival\n
+How the Game Works\n
+
+• The Goal: Create three unique paintings by layering transparent art cards, scoring points(ribbons) based on changing goal cards, and earning the most total points.\n
+• Drafting Cards: On your turn, you either draft a transparent art card from a central row or make a painting.Taking cards further to the right in the line requires placing Inspiration tokens on the cards you skip.\n
+• Layering Art: Each transparent card features a section of artwork and specific scoring icons.When you build a painting, you sleeve three art cards together into a background card.The way you order and overlap them reveals or hides different icons, creating a visual and strategic puzzle.\n
+• Scoring: At the end of your turn or after completing your paintings, you compare the visible icons on your finished artwork to a set of active scoring conditions(which change every game) to collect colored ribbons.\n
+• Winning: Once every player has completed and scored three paintings, the player with the highest total points wins the game.\n
+`,
+    reserved: [],
+},
+  {
+    id: 100,
+    gm: "Steve Marsh ",
+    gmEmail: "stephengmarsh@gmail.com",
+    gmPhone: "925 272 1075",
+    day: 'saturday',
+    startTime: 1400,
+    duration: 4,
+    tables: 1,
+    genre: "20mm WW2",
+    players: "2/4",
+    gameType: 'miniatures',
+    title: "Monte Carlo or Bust",
+    description: "WW2 1940 Italian invasion of the South of France ",
+    rules: "Chain of Command",
+    reserved: [],
+
+  },
+
 
 ];
     
