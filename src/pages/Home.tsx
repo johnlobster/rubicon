@@ -77,7 +77,7 @@ function Home() {
 
         <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>Flea market</Typography>
         <Typography align='left'>
-          See <a href="/sale">Sale</a> page. Will be on the Sunday. Tables are $10 and available for GMs and weekend pass purchasers 
+          See <a href="/sale">Sale</a> page. Will be on Saturday and Sunday. 5 tables will be available. Tables are $10 and available for GMs and weekend pass purchasers. Contact store to pay
         </Typography>
 
         <Typography variant="h3" align='left' sx={{ mt: '0.5rem' }}>Local information</Typography>
