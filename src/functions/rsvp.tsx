@@ -24,7 +24,7 @@ emailjs.init({
 // const emailjsEmail = 'rubiconwargamesac@gmail.com'
 const emailjsEmail = 'johnlobster@comcast.net'
 
-let emailjsMessage = "RSVP returned"
+let emailjsMessage = "RSVP returned\n"
 
 async function rsvpSubmit(event: React.SubmitEvent) {
 
