@@ -13,7 +13,7 @@ function Sale() {
         Flea market
       </Typography>
       <Typography align="left">
-        Flea market will be Saturday and Sunday (times to be finialized). 5 tables will be available unless we have space for more. 
+        Flea market will be Saturday and Sunday from 4pm to 6pm. 5 tables will be available unless we have space for more. 
         The tables are $10 each, for GMs and weekend pass purchasers. Tables are 6' by 30"
       </Typography>
 
