@@ -6,6 +6,44 @@ import rData from '../assets/data/signup.tsx'
 import Button from '@mui/material/Button'
 import rsvpSubmit from '../functions/rsvp.tsx'
 
+import Dialog from '@mui/material/Dialog'
+import DialogTitle from '@mui/material/DialogTitle'
+import DialogContent from '@mui/material/DialogContent'
+import DialogActions  from '@mui/material/DialogActions'
+
+import {useState} from "react"
+
+
+function RSVPDialog() {
+  const [open, setOpen] = useState(true)
+
+  const hideDialog = () => {
+    setOpen(false)
+  }
+
+  return (
+    <>
+    { open && (
+      <Dialog open={open}>
+        <DialogTitle>
+          RSVP for Rubicon
+        </DialogTitle>
+        <DialogContent>
+          Sign up for Rubicon - your name and any comment you might want to make. We do not publish names or comments
+        </DialogContent>
+        <DialogActions>
+          <Button color='primary' variant="contained" >
+            RSVP
+          </Button>
+          <Button color = 'primary' onClick={hideDialog}>
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+    )}
+    </>
+  )
+}
 function Home() {
   const img = <Box component="img" src={glogo} alt="Game Kastle logo" sx={{ height: 56, display: 'block' }} />
   return (
@@ -33,15 +71,19 @@ function Home() {
                 {rData.length} people are attending - how about you ?
               </Typography>
             )} 
-          <Button
-
-            color="primary"
-            variant='contained'
-
-
-          >
-            RSVP
-          </Button>
+            <Typography align='left'>
+              <Button
+                color="primary"
+                variant='contained'
+                onClick={() => {return (
+                  <RSVPDialog />
+                )}}
+              >
+                RSVP
+              </Button>
+            </Typography>
+            <RSVPDialog />
+          
             
         
 
